@@ -19,7 +19,7 @@ export default defineConfig({
         name: 'ADS Device QR Scanning Test',
         short_name: 'ADS Device QR Scanning Test',
         description: 'ADS Device QR Scanning Test',
-        theme_color: '#ffffff',
+        theme_color: '#242424',
         background_color: '#242424',
         icons: [
           {
@@ -36,7 +36,13 @@ export default defineConfig({
             src: 'logo.png',
             sizes: '512x512',
             type: 'image/png',
-            purpose: 'any maskable',
+            purpose: 'any',
+          },
+          {
+            src: 'logo.png',
+            sizes: '512x512',
+            type: 'image/png',
+            purpose: 'maskable',
           },
         ],
       },
