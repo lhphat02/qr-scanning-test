@@ -13,6 +13,7 @@
     "@reduxjs/toolkit": "^1.9.5",
     "html5-qrcode": "^2.3.8",
     "qr-scanner": "^1.4.2",
+    "quagga": "^0.12.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-redux": "^8.1.1",
