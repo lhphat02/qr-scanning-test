@@ -16,7 +16,7 @@ const Scanner = ({ turnOff }) => {
           type: 'LiveStream',
           target: document.querySelector('#scanner-container'),
           constraints: {
-            facingMode: 'user', // or 'user' for front camera
+            facingMode: 'environment',
           },
         },
         decoder: {
