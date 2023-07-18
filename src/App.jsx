@@ -17,8 +17,9 @@ function App() {
 
   return (
     <div className="flex flex-col items-center justify-center w-full p-5 sm:p-10">
-      <div className="flex justify-between w-4/5 p-3 border-2 rounded-lg">
+      <div className="flex justify-between w-4/5 gap-10 p-3 border-2 rounded-lg sm:w-2/5">
         <button
+          className="sm:w-full"
           onClick={() => {
             setToggleQRScanner(true);
             setToggleBarcodeScanner(false);
@@ -27,6 +28,7 @@ function App() {
           Scan QR
         </button>
         <button
+          className="sm:w-full"
           onClick={() => {
             setToggleQRScanner(false);
             setToggleBarcodeScanner(true);

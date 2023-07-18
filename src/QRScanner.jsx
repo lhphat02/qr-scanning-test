@@ -50,7 +50,7 @@ const QRScanner = ({ onScan }) => {
         <div className="flex flex-col items-center justify-center w-full sm:p-10">
           {!toggleScanner ? (
             <button
-              className="text-2xl"
+              className="w-full text-2xl"
               onClick={() => {
                 setToggleScanner(true);
                 activateQRScanner();

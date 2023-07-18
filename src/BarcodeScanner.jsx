@@ -53,41 +53,38 @@ const Scanner = ({ turnOff }) => {
   return (
     <div className="flex flex-col w-full p-5">
       <h1 className="mb-5 text-3xl font-bold text-center">Barcode Scanner</h1>
-      {!scannerActive ? (
-        <button
-          className="text-2xl"
-          onClick={() => {
-            activateBarcodeScanner();
-          }}
-        >
-          Start Scanning
-        </button>
-      ) : null}
+      <div className="flex flex-col items-center justify-center w-full sm:p-10">
+        {!scannerActive ? (
+          <button
+            className="text-2xl sm:w-1/5"
+            onClick={() => {
+              activateBarcodeScanner();
+            }}
+          >
+            Start Scanning
+          </button>
+        ) : null}
 
-      {!scannedBarcode ? (
-        <div id="scanner-container" className="w-full mt-10 rounded-xl h-3/5">
-          <video
-            autoPlay={true}
-            preload="auto"
-            src=""
-            muted={true}
-            playsInline={true}
-          ></video>
-          <canvas
-            id="scanner-canvas"
-            className="w-0 h-0 drawingBuffer"
-            width="0"
-            height="0"
-          ></canvas>
-        </div>
-      ) : (
-        <div className="flex flex-col items-center justify-center w-full">
-          <p className="mb-5 text-2xl font-semibold">Your Barcode Data: </p>
-          <p className="w-3/5 p-3 text-xl font-semibold text-center break-all border-2 rounded-lg sm:p-5 sm:w-full">
-            {scannedBarcode}
-          </p>
-        </div>
-      )}
+        {!scannedBarcode ? (
+          <div
+            id="scanner-container"
+            className="flex items-center justify-center w-full mt-10 rounded-xl h-3/5"
+          >
+            <video src="" playsInline className="rounded-md"></video>
+            <canvas
+              id="scanner-canvas"
+              className="w-0 h-0 drawingBuffer"
+            ></canvas>
+          </div>
+        ) : (
+          <div className="flex flex-col items-center justify-center w-full">
+            <p className="mb-5 text-2xl font-semibold">Your Barcode Data: </p>
+            <p className="p-3 text-xl font-semibold text-center break-all border-2 rounded-lg  sm:p-5">
+              {scannedBarcode}
+            </p>
+          </div>
+        )}
+      </div>
     </div>
   );
 };
